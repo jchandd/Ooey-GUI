@@ -20,3 +20,15 @@ def calculate():
     total_label.config(
         text=f"Total Amount: ${total_amount:.2f}"
     )  # Update the total amount label
+
+
+# Create the main application window
+root = tk.Tk()
+root.title("Tip Calculator")
+root.geometry("300x200")
+
+# Create and place the widgets
+label = tk.Label(root, text="Enter Total Bill:")
+label.pack(pady=5)
+entry = tk.Entry(root)
+entry.pack(pady=5)

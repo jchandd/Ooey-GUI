@@ -25,17 +25,6 @@ root.title("Tip Calculator")
 entry = tk.Entry(root)
 entry.pack(pady=10)
 
-#Create somewhere to type in your tip percentage (no slider)
-tip_entry = tk.Entry(root)
-tip_entry.pack(pady=10)
-
-#replace the slider with the entry field for tip percentage
-#Create and place the calculate button
-calculate_button = tk.Button(root, text="Calculate", command=calculate)
-calculate_button.pack(pady=10)
-
-#Create and place the label to display the result
-
 
 
 

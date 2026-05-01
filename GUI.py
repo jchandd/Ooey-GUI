@@ -1,6 +1,8 @@
 #TIP CALCULATOR
 #Able to calculate tip from total bill
-#Calculates and adds of tip and total bill
+#Calculates and adds up tip and total bill
+#Allows user to select tip percentage by typing in a number
+
 
 import tkinter as tk
 
@@ -19,13 +21,21 @@ def calculate():
 #Create the main application window
 root = tk.Tk()
 root.title("Tip Calculator")
-#Create and place the widgets
-label = tk.Label(root, text="Enter the total bill:")
-
+#Create and place the entry field for the total bill
 entry = tk.Entry(root)
-slider = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, label="Tip Percentage")
-button = tk.Button(root, text="Calculate", command=calculate)
-result = tk.Label(root, text="Tip: $0.00\nTotal: $0.00")
+entry.pack(pady=10)
+
+#Create somewhere to type in your tip percentage (no slider)
+tip_entry = tk.Entry(root)
+tip_entry.pack(pady=10)
+
+#replace the slider with the entry field for tip percentage
+#Create and place the calculate button
+calculate_button = tk.Button(root, text="Calculate", command=calculate)
+calculate_button.pack(pady=10)
+
+#Create and place the label to display the result
+
 
 
 

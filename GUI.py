@@ -19,7 +19,6 @@ def calculate():
 #Create the main application window
 root = tk.Tk()
 root.title("Tip Calculator")
-
 #Create and place the widgets
 label = tk.Label(root, text="Enter the total bill:")
 
@@ -28,10 +27,5 @@ slider = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, label="Tip Percen
 button = tk.Button(root, text="Calculate", command=calculate)
 result = tk.Label(root, text="Tip: $0.00\nTotal: $0.00")
 
-label.pack()
-entry.pack()
-slider.pack()
-button.pack()
-result.pack()
-#Start the main event loop
-root.mainloop()
+
+

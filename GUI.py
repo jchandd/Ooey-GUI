@@ -21,7 +21,9 @@ def calculate():
 #Create the main application window
 root = tk.Tk()
 root.title("Tip Calculator")
-#Create and place the entry field for the total bill
+root.geometry("300x200")
+
+#Create and place the entry field for total bill
 entry = tk.Entry(root)
 entry.pack(pady=10)
 
@@ -32,6 +34,14 @@ slider.pack(pady=10)
 #Create and place the calculate button
 button = tk.Button(root, text="Calculate", command=calculate)
 button.pack(pady=10)
+
+#Create and place the label to display the result
+result = tk.Label(root, text="")
+result.pack(pady=10)
+
+#Start the main event loop
+root.mainloop()
+
 
 
 

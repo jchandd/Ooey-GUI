@@ -28,16 +28,16 @@ entry = tk.Entry(root)
 entry.pack(pady=10)
 
 #Create and place the slider for selecting tip percentage
-slider = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, label="Tip Percentage")
+slider = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, label="Tip Percentage") #Create a horizontal slider with a range from 0 to 100 and a label "Tip Percentage"  
 slider.pack(pady=10)
 
 #Create and place the calculate button
 button = tk.Button(root, text="Calculate", command=calculate)
-button.pack(pady=10)
+button.pack(pady=10) #Create a button with the text "Calculate" that calls the calculate function when clicked, and place it in the window with some padding.
 
 #Create and place the label to display the result
-result = tk.Label(root, text="")
-result.pack(pady=10)
+result = tk.Label(root, text="") #Create a label to display the result of the calculation, initially empty, and place it in the window with some padding.
+result.pack(pady=10) 
 
 #Start the main event loop
 root.mainloop()

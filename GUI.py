@@ -39,6 +39,22 @@ root.geometry("400x300")
 entry = tk.Entry(root)
 entry.pack(pady=10)
 
+def set_tip(value):
+    slider.set(value)
+
+menubutton = tk.Menubutton(root, text="Quick Tip %", relief="raised")
+menu = tk.Menu(menubutton, tearoff=0)
+menubutton.config(menu=menu)
+
+menu.add_command(label="10%", command=lambda: set_tip(10))
+menu.add_command(label="15%", command=lambda: set_tip(15))
+menu.add_command(label="18%", command=lambda: set_tip(18))
+menu.add_command(label="20%", command=lambda: set_tip(20))
+menu.add_command(label="25%", command=lambda: set_tip(25))
+
+menubutton.pack(pady=10)
+# ----------------------------------------------------------
+
 #Create and place the slider for selecting tip percentage
 slider = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, label="Tip Percentage")
 slider.pack(pady=10)

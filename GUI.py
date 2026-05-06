@@ -16,13 +16,13 @@ def calculate():
 
     total = bill + tip #Calculate the total amount (bill + tip)
 
-    result.config(text=f"Tip: ${tip:.2f}\nTotal: ${total:.2f}")
+    result.config(text=f"Tip: ${tip:.2f}\nTotal: ${total:.2f}") #Update the result label to show the calculated tip and total, formatted to 2 decimal places.
 
     try:
-        people = int(split_entry.get())
+        people = int(split_entry.get()) 
         if people > 0:
             split_amount = total / people
-            split_result.config(text=f"Each person pays: ${split_amount:.2f}")
+            split_result.config(text=f"Each person pays: ${split_amount:.2f}") #Calculate the amount each person pays by dividing the total by the number of people, and update the split_result label to show this amount, formatted to 2 decimal places.
         else:
             split_result.config(text="Number must be > 0")
 
